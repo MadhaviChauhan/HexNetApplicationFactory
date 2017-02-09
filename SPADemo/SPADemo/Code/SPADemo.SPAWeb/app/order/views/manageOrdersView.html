@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>Manage Orders</h2>
+    <br /><br />
+    <div ng-app="app.order">
+        <div class="error">{{error}}</div>
+        <div ng-controller="manageOrdersController">
+
+            <div style="border-radius:25px;background-color:lightgrey;width:100%;height:225px;padding-right:20px;">
+                <br />
+                <div style="width:50%;float:left;">
+
+                    <div class="form-group">
+                        <label class="col-md-3" style="text-align:right;">Order No.: </label><input class="col-md-9" type="number" ng-model="orderNo"><br />
+                        <label class="col-md-3" style="text-align:right;">Customer: </label><input class="col-md-9" type="text" ng-model="customer"><br />
+                        <label class="col-md-3" style="text-align:right;">From: </label><input class="col-md-9" style="height:35px;" type="date" ng-model="orderDateFrom" placeholder="yyyy-MM-dd"><br />
+                        <label class="col-md-3" style="text-align:right;">To: </label><input class="col-md-9" style="height:35px;" type="date" ng-model="orderDateTo" placeholder="yyyy-MM-dd"><br />
+                    </div>
+
+                </div>
+                <div style="width:50%;float:right;">
+                    <div class="form-group">
+                        <label class="col-md-3" style="text-align:right;">SalesPerson: </label><input class="col-md-9" type="text" ng-model="salesPerson"><br />
+                        <label class="col-md-3" style="text-align:right;">Carrier: </label><input class="col-md-9" type="text" ng-model="carrier"><br />
+                        <label class="col-md-3" style="text-align:right;">Status: </label><select class="col-md-9" style="height:35px;" ng-model="OrderStatus.value" ng-options="status for status in OrderStatus.values"></select><br />
+
+
+                    </div><br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="Search" class="btn-default" ng-click="searchOrders()" />
+
+                </div>
+
+
+            </div>
+            <br />
+            <div style="border-radius:25px;background-color:gainsboro;width:100%;padding:20px 20px 20px 20px;">
+
+                <div id="uigrid" ui-grid-selection ui-grid-edit ui-grid-pagination ui-grid-resize-columns class="grid" ui-grid="gridOptions"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

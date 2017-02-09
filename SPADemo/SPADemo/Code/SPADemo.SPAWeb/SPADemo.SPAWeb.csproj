@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8D4C671-56C6-44FF-A65D-C26F9287B1BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPADemo.SPAWeb</RootNamespace>
+    <AssemblyName>SPADemo.SPAWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OpenIdConnect">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.OpenIdConnect.3.0.1\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.constant.js" />
+    <Content Include="app\app.module.js" />
+    <Content Include="app\app.factory.js" />
+    <Content Include="app\app.provider.js" />
+    <Content Include="app\customer\views\allCustomerView.html" />
+    <Content Include="app\customer\views\createCustomerView.html" />
+    <Content Include="app\customer\customerService.js" />
+    <Content Include="app\customer\controllers\deleteCustomerController.js" />
+    <Content Include="app\customer\views\deleteCustomerView.html" />
+    <Content Include="app\customer\controllers\editCustomerController.js" />
+    <Content Include="app\customer\views\editCustomerView.html" />
+    <Content Include="app\customer\controllers\singleCustomerController.js" />
+    <Content Include="app\customer\views\singleCustomerView.html" />
+    <Content Include="app\order\app.order.routes.js" />
+    <Content Include="app\order\controllers\manageOrdersController.js" />
+    <Content Include="app\order\controllers\orderProductDetailsController.js" />
+    <Content Include="app\order\orderService.js" />
+    <Content Include="app\order\views\manageOrdersView.html" />
+    <Content Include="app\order\views\orderProductDetailsView.html" />
+    <Content Include="app\shared\controllers\layoutController.js" />
+    <Content Include="app\shared\views\footerView.html" />
+    <Content Include="app\shared\views\headerView.html" />
+    <Content Include="app\content\bootstrap-theme.css" />
+    <Content Include="app\content\bootstrap-theme.min.css" />
+    <Content Include="app\content\bootstrap.css" />
+    <Content Include="app\content\bootstrap.min.css" />
+    <Content Include="app\content\images\aboutus_icon.png" />
+    <Content Include="app\content\images\accent.png" />
+    <Content Include="app\content\images\ApplicationConfiguration.png" />
+    <Content Include="app\content\images\ApplicationType.png" />
+    <Content Include="app\content\images\ArchitectureChart.png" />
+    <Content Include="app\content\images\ArchitectureDesign.png" />
+    <Content Include="app\content\images\bullet.png" />
+    <Content Include="app\content\images\contactus_icon.png" />
+    <Content Include="app\content\images\ContinuousIntegration.png" />
+    <Content Include="app\content\images\create_customer_button.png" />
+    <Content Include="app\content\images\CrossCutting.png" />
+    <Content Include="app\content\images\DataAccess.png" />
+    <Content Include="app\content\images\DataProvider.png" />
+    <Content Include="app\content\images\delete_icon.png" />
+    <Content Include="app\content\images\Detailed.png" />
+    <Content Include="app\content\images\Detailed2.png" />
+    <Content Include="app\content\images\details_icon.png" />
+    <Content Include="app\content\images\edit_icon.png" />
+    <Content Include="app\content\images\FinalSolution.png" />
+    <Content Include="app\content\images\heroAccent.png" />
+    <Content Include="app\content\images\hexnet_logo.png" />
+    <Content Include="app\content\images\hexnet_web1specification.jpg" />
+    <Content Include="app\content\images\hexnet_web2specification.jpg" />
+    <Content Include="app\content\images\home_icon.png" />
+    <Content Include="app\content\images\Isolation.png" />
+    <Content Include="app\content\images\learnmore_button.png" />
+    <Content Include="app\content\images\Mobility.png" />
+    <Content Include="app\content\images\ObjectMapping.png" />
+    <Content Include="app\content\images\orderedList0.png" />
+    <Content Include="app\content\images\orderedList1.png" />
+    <Content Include="app\content\images\orderedList2.png" />
+    <Content Include="app\content\images\orderedList3.png" />
+    <Content Include="app\content\images\orderedList4.png" />
+    <Content Include="app\content\images\orderedList5.png" />
+    <Content Include="app\content\images\orderedList6.png" />
+    <Content Include="app\content\images\orderedList7.png" />
+    <Content Include="app\content\images\orderedList8.png" />
+    <Content Include="app\content\images\orderedList9.png" />
+    <Content Include="app\content\images\ProjectTemplate.png" />
+    <Content Include="app\content\images\search_customer_button.png" />
+    <Content Include="app\content\images\search_order_button.png" />
+    <Content Include="app\content\images\ServiceLayer.png" />
+    <Content Include="app\content\images\SiteLogo.png" />
+    <Content Include="app\content\images\SourceControl.png" />
+    <Content Include="app\content\images\STEP-_diagram.png" />
+    <Content Include="app\content\jasny-bootstrap.css" />
+    <Content Include="app\content\jasny-bootstrap.min.css" />
+    <Content Include="app\content\ng-grid.css" />
+    <Content Include="app\content\ng-grid.min.css" />
+    <Content Include="app\content\Site.css" />
+    <Content Include="app\content\themes\base\accordion.css" />
+    <Content Include="app\content\themes\base\all.css" />
+    <Content Include="app\content\themes\base\autocomplete.css" />
+    <Content Include="app\content\themes\base\base.css" />
+    <Content Include="app\content\themes\base\button.css" />
+    <Content Include="app\content\themes\base\core.css" />
+    <Content Include="app\content\themes\base\datepicker.css" />
+    <Content Include="app\content\themes\base\dialog.css" />
+    <Content Include="app\content\themes\base\draggable.css" />
+    <Content Include="app\content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="app\content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="app\content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="app\content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="app\content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="app\content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="app\content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="app\content\themes\base\menu.css" />
+    <Content Include="app\content\themes\base\progressbar.css" />
+    <Content Include="app\content\themes\base\resizable.css" />
+    <Content Include="app\content\themes\base\selectable.css" />
+    <Content Include="app\content\themes\base\selectmenu.css" />
+    <Content Include="app\content\themes\base\slider.css" />
+    <Content Include="app\content\themes\base\sortable.css" />
+    <Content Include="app\content\themes\base\spinner.css" />
+    <Content Include="app\content\themes\base\tabs.css" />
+    <Content Include="app\content\themes\base\theme.css" />
+    <Content Include="app\content\themes\base\tooltip.css" />
+    <Content Include="app\content\ui-bootstrap-csp.css" />
+    <Content Include="app\content\ui-grid.css" />
+    <Content Include="app\content\ui-grid.min.css" />
+    <Content Include="app\content\ui-grid.svg" />
+    <Content Include="app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\index.html" />
+    <Content Include="app\scripts\angular-aria.js" />
+    <Content Include="app\scripts\angular-aria.min.js" />
+    <Content Include="app\scripts\angular-cookies.js" />
+    <Content Include="app\scripts\angular-cookies.min.js" />
+    <Content Include="app\scripts\angular-csp.css" />
+    <Content Include="app\scripts\angular-loader.js" />
+    <Content Include="app\scripts\angular-loader.min.js" />
+    <Content Include="app\scripts\angular-message-format.js" />
+    <Content Include="app\scripts\angular-message-format.min.js" />
+    <Content Include="app\scripts\angular-messages.js" />
+    <Content Include="app\scripts\angular-messages.min.js" />
+    <Content Include="app\scripts\angular-mocks.js" />
+    <Content Include="app\scripts\angular-resource.js" />
+    <Content Include="app\scripts\angular-resource.min.js" />
+    <Content Include="app\scripts\angular-route.js" />
+    <Content Include="app\scripts\angular-route.min.js" />
+    <Content Include="app\scripts\angular-sanitize.js" />
+    <Content Include="app\scripts\angular-sanitize.min.js" />
+    <Content Include="app\scripts\angular-scenario.js" />
+    <Content Include="app\scripts\angular-touch.js" />
+    <Content Include="app\scripts\angular-touch.min.js" />
+    <Content Include="app\scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="app\scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="app\scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="app\scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="app\scripts\angular.js" />
+    <Content Include="app\scripts\angular.min.js" />
+    <Content Include="app\scripts\app\app.datamodel.js" />
+    <Content Include="app\scripts\app\app.viewmodel.js" />
+    <Content Include="app\scripts\app\common.js" />
+    <Content Include="app\scripts\app\home.viewmodel.js" />
+    <Content Include="app\scripts\app\_run.js" />
+    <Content Include="app\scripts\bootstrap.js" />
+    <Content Include="app\scripts\bootstrap.min.js" />
+    <Content Include="app\scripts\angular-aria.min.js.map" />
+    <Content Include="app\scripts\angular-cookies.min.js.map" />
+    <Content Include="app\scripts\angular-loader.min.js.map" />
+    <Content Include="app\scripts\angular-message-format.min.js.map" />
+    <Content Include="app\scripts\angular-messages.min.js.map" />
+    <Content Include="app\scripts\angular-resource.min.js.map" />
+    <Content Include="app\scripts\angular-route.min.js.map" />
+    <Content Include="app\scripts\angular-sanitize.min.js.map" />
+    <Content Include="app\scripts\angular-touch.min.js.map" />
+    <Content Include="app\scripts\angular.min.js.map" />
+    <Content Include="app\content\ui-grid.woff" />
+    <Content Include="app\content\ui-grid.ttf" />
+    <Content Include="app\content\ui-grid.eot" />
+    <Content Include="app\content\bootstrap-theme.css.map" />
+    <Content Include="app\order\app.order.module.js" />
+    <Content Include="app\config\config.json" />
+    <Content Include="app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\content\bootstrap.css.map" />
+    <Content Include="app\content\jasny-bootstrap.css.map" />
+    <None Include="app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\customer\controllers\createCustomerController.js" />
+    <Content Include="app\customer\app.customer.module.js" />
+    <Content Include="app\customer\app.customer.routes.js" />
+    <Content Include="app\customer\controllers\allCustomerController.js" />
+    <Content Include="app\scripts\jasny-bootstrap.js" />
+    <Content Include="app\scripts\jasny-bootstrap.min.js" />
+    <Content Include="app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\scripts\jquery-ui-1.11.4.js" />
+    <Content Include="app\scripts\jquery-ui-1.11.4.min.js" />
+    <None Include="app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\scripts\jquery.validate.js" />
+    <Content Include="app\scripts\jquery.validate.min.js" />
+    <Content Include="app\scripts\knockout-2.3.0.debug.js" />
+    <Content Include="app\scripts\knockout-2.3.0.js" />
+    <Content Include="app\scripts\knockout.validation.debug.js" />
+    <Content Include="app\scripts\knockout.validation.js" />
+    <Content Include="app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\scripts\ng-grid.js" />
+    <Content Include="app\scripts\ng-grid.min.js" />
+    <Content Include="app\scripts\respond.js" />
+    <Content Include="app\scripts\respond.min.js" />
+    <Content Include="app\scripts\sammy-0.7.4.js" />
+    <Content Include="app\scripts\sammy-0.7.4.min.js" />
+    <Content Include="app\scripts\Site.js" />
+    <Content Include="app\scripts\ui-grid.js" />
+    <Content Include="app\scripts\ui-grid.min.js" />
+    <Content Include="app\scripts\_references.js" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\assets\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="app\scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Models\Web.Models.csproj">
+      <Project>{e4af563c-b8e4-498f-b8ed-27f14474bda9}</Project>
+      <Name>Web.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59242</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59352/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+   
+    <base href ="/HetNetSPAWeb/"   />
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="content/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="content/Site.css" />
+    <link type="text/css" rel="stylesheet" href="content/ng-grid.css" />
+    <link type="text/css" rel="stylesheet" href="content/ng-grid.min.css" />
+    <link type="text/css" rel="stylesheet" href="content/ui-grid.css" />
+    <link type="text/css" rel="stylesheet" href="content/ui-grid.min.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/core.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/resizable.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/selectable.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/accordion.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/autocomplete.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/button.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/dialog.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/slider.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/datepicker.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/progressbar.css" />
+    <link type="text/css" rel="stylesheet" href="content/Site.css" />
+    <link type="text/css" rel="stylesheet" href="content/themes/base/theme.css" />
+    <link type="text/css" rel="stylesheet" href="content/jasny-bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="content/jasny-bootstrap.min.css" />
+</head>
+<body>
+    <script type="text/javascript" src="scripts/Site.js"></script>
+    <script type="text/javascript" src="scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui-1.11.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui-1.11.4.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="scripts/angular.js"></script>
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="scripts/jasny-bootstrap.js"></script>
+    <!--<script type="text/javascript" src="scripts/angular-ui/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/angular-ui/ui-bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="scripts/ui-grid.js"></script>
+    <script type="text/javascript" src="scripts/ui-grid.min.js"></script>
+    <script type="text/javascript" src="app.module.js"></script>
+    <script type="text/javascript" src="app.factory.js"></script>
+    <script type="text/javascript" src="app.constant.js"></script>
+    <script type="text/javascript" src="app.provider.js"></script>
+    <script type="text/javascript" src="shared/controllers/layoutController.js"></script>
+    <script type="text/javascript" src="customer/app.customer.module.js"></script>
+    <script type="text/javascript" src="customer/app.customer.routes.js"></script>
+    <script type="text/javascript" src="customer/customerService.js"></script>
+    <script type="text/javascript" src="customer/controllers/allCustomerController.js"></script>
+    <script type="text/javascript" src="customer/controllers/createCustomerController.js"></script>
+    <script type="text/javascript" src="customer/controllers/deleteCustomerController.js"></script>
+    <script type="text/javascript" src="customer/controllers/editCustomerController.js"></script>
+    <script type="text/javascript" src="customer/controllers/singleCustomerController.js"></script>
+    <script type="text/javascript" src="order/app.order.module.js"></script>
+    <script type="text/javascript" src="order/app.order.routes.js"></script>
+    <script type="text/javascript" src="order/orderService.js"></script>
+    <script type="text/javascript" src="order/controllers/manageOrdersController.js"></script>
+    <script type="text/javascript" src="order/controllers/orderProductDetailsController.js"></script>
+    <div ng-app="app">
+        <header>
+            <div ng-controller="layoutController">
+                <div ng-include src="header.url"></div>
+                <script type="text/ng-template" id="header.html">
+                </script>
+            </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                <div ng-view></div>
+                
+
+            </section>
+        </div>
+        <footer>
+            <div ng-controller="layoutController">
+                <div ng-include src="footer.url"></div>
+                <script type="text/ng-template" id="footer.html">
+                </script>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

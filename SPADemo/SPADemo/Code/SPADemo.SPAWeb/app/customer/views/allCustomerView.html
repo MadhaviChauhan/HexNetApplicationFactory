@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Customers</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+   <h2>Manage Customers</h2>
+    <br/><br/>
+    <div ng-app="app.customer">
+        <div class="error">{{error}}</div>
+        <div class="message-success">{{message}}</div>
+    <div style="border-radius:25px;background-color:gainsboro;width:100%;padding:20px 20px 20px 20px;">
+        <button type="button" class="btn btn-sm btn-primary" ng-click="create()" style="float:right;">Create Customer</button><br/><br/>
+        <div ng-controller="allCustomerController">
+            <div id="uigrid" ui-grid-selection ui-grid-edit ui-grid-pagination ui-grid-resize-columns class="grid" ui-grid="gridOptions"></div>
+
+        </div>
+        </div>
+
+       
+        </div>
+</body>
+</html>
